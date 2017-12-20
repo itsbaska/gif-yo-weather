@@ -1,17 +1,16 @@
+html {
+  height: 100%;
+}
+
 body {
-  background-color: #98F9FF;
+  min-height: 100%;
+  background-color: #98f9ff;
   font-family: 'Open sans', sans-serif;
   margin: 0 auto;
-  margin-bottom: 10%;
 }
 
 header {
   display: block;
-}
-
-.new-location-form {
-  width: 80%;
-  margin: auto;
 }
 
 .location-container {
@@ -73,12 +72,13 @@ nav ul {
 }
 nav li {
   margin: 5px;
-  padding:;
+  padding: ;
 }
 
-a:link, a:visited {
+a:link,
+a:visited {
   text-decoration: none;
-  color: #B25413;
+  color: #b25413;
 }
 
 h1 {
@@ -108,7 +108,7 @@ input .block {
 }
 
 .errors {
-  color:  #FF0000;
+  color: #ff0000;
 }
 
 .no-style-button {
@@ -117,10 +117,9 @@ input .block {
 
 input.form-input {
   display: inline-block;
-  padding: 15px;
   border: 0;
   outline: 0;
-  background-color: #FFF;
+  background-color: #fff;
   padding: 15px;
   border-radius: 5px;
   margin-right: 20px;
@@ -132,13 +131,14 @@ input.register {
   padding: 15px;
   border: 0;
   outline: 0;
-  background-color: #FFF;
+  background-color: #fff;
   padding: 15px;
   border-radius: 5px;
   margin: 20px;
   width: 200px;
 }
-.register-form, input.register {
+.register-form,
+input.register {
   margin: 20px auto;
   display: block;
   text-align: center;
@@ -148,10 +148,10 @@ h2 {
   text-align: center;
 }
 
-input.form-button {
+/*input.form-button {
   border: 0;
   outline: 0;
-  background-color: #B25413;
+  background-color: #b25413;
   padding: 15px;
   border-radius: 5px;
   width: 200px;
@@ -159,11 +159,14 @@ input.form-button {
   text-transform: uppercase;
   font-family: 'Fredoka One', cursive;
   letter-spacing: 3px;
-}
+  box-sizing: border-box;
+}*/
+
 .form-button {
+  box-sizing: border-box;
   border: 0;
   outline: 0;
-  background-color: #B25413;
+  background-color: #b25413;
   padding: 15px;
   border-radius: 5px;
   width: 200px;
@@ -172,6 +175,7 @@ input.form-button {
   font-family: 'Fredoka One', cursive;
   letter-spacing: 3px;
 }
+
 .today li {
   display: block;
   padding: 10px;
@@ -206,17 +210,53 @@ ul {
   font: inherit;
 }
 
-
 .no-style-button input:hover {
   text-decoration: underline;
 }
 
-@media (max-width: 375px) {
+#add-location-form input[type='text'] {
+  border: 0;
+  outline: 0;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  width: 250px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+#add-location-form input[type='submit'] {
+  border: 0;
+  outline: 0;
+  background-color: #b25413;
+  padding: 15px;
+  border-radius: 5px;
+  width: 250px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Fredoka One', cursive;
+  letter-spacing: 3px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+#add-location-form {
+  margin: 0 auto;
+  width: 800px;
+}
+
+#add-location-form input[type='text'],
+#add-location-form input[type='submit'] {
+  margin: 0 5px;
+  display: inline;
+}
+
+@media screen and (max-width: 500px) {
   body {
     width: 100%;
   }
 
-  nav li{
+  nav li {
     display: block;
   }
 
@@ -230,18 +270,28 @@ ul {
 }
 
 #add-location-form {
-  padding: 10px 50px;
+  margin: 0 auto;
 }
 
 .dashboard {
   height: 150px;
- }
+}
 
 .region-name {
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 
-.gif-yo-weather a{
+.gif-yo-weather a {
   color: black;
+}
+
+#add-location-form {
+  width: 250px;
+}
+
+#add-location-form input[type='text'],
+#add-location-form input[type='submit'] {
+  display: block;
+  margin: 15px 0;
 }
