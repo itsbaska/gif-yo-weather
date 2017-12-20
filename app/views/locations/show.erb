@@ -1,0 +1,25 @@
+<div class="city">
+  <p class="city-name"><%= @weather_info.request_location %></p>
+  <p>Sunrise: <%= @weather_info.astronomy.sunrise.strftime("%l:%M %p") %> | Sunset: <%= @weather_info.astronomy.sunset.strftime("%l:%M %p") %></p>
+</div>
+<div class="today">
+<h4>Today's weather: <%= @weather_info.forecasts.first.text %></h4>
+ <ul>
+  <li>
+    <p>low's: <%= @weather_info.forecasts.first.low %> °<%= @weather_info.units.temperature %>      | high's: <%= @weather_info.forecasts.first.high %> °<%= @weather_info.units.temperature %></p>
+    <% url = GiphyServices.get_gif(@weather_info.forecasts.first.text) %>
+    <iframe src="https://giphy.com/embed/<%= url %>" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+  </li>
+</ul>
+</div>
+
+<div class="today">
+<h4>Tomorrow's weather: <%= @weather_info.forecasts[1].text %></h4>
+<ul>
+ <li>
+  <p>low's: <%= @weather_info.forecasts[1].low %> °<%= @weather_info.units.temperature %> | high's: <%= @weather_info.forecasts[1].high %> °<%= @weather_info.units.temperature %></p>
+  <% url = GiphyServices.get_gif(@weather_info.forecasts[1].text) %>
+  <iframe src="https://giphy.com/embed/<%= url %>" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+  </li>
+</ul>
+</div>

@@ -1,0 +1,4 @@
+<form class="no-style-button" method="POST" action="/users/<%= current_user.id %>/locations/<%= location.id %>">
+  <input type="hidden" name="_method" value="DELETE" />
+  <input type="submit" class="button" value="Delete Location" />
+</form>

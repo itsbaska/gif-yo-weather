@@ -1,0 +1,15 @@
+<div class="location-container">
+<ul class="location-list">
+  <% @locations.each do |location| %>
+    <li class="location-box">
+      <p class="city-name"><a href="/locations/<%= location.id %>"><%= location.city %></a></p>
+      <p class="region-name"><%= location.region %></p>
+    </li>
+  <% end %>
+</ul>
+</div>
+<% if logged_in? %>
+  <div class="new-location-container">
+    <%= erb :"/locations/new" %>
+  </div>
+<% end %>

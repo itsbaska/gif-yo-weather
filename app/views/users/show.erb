@@ -1,0 +1,28 @@
+<% if @errors %>
+  <ul>
+  <% @errors.each do |error| %>
+    <li class="errors"><%= error %></li>
+  <% end %>
+  </ul>
+<% end %>
+
+<ul>
+  <% @user_locations.each do |location| %>
+    <div class="location-box dashboard">
+      <li>
+        <p class="city-name"><a href="/locations/<%= location.id %>"><%= location.city %></a></p>
+        <p class="region-name"><%= location.region %></p>
+        <% if logged_in? %>
+        <p>
+          <%= erb :"/locations/_delete", locals: { location: location } %>
+         </p>
+         <% end %>
+      </li>
+    </div>
+  <% end %>
+</ul>
+<% if logged_in? %>
+  <div class="new-location-form">
+    <%= erb :"/locations/new" %>
+  </div>
+<% end %>

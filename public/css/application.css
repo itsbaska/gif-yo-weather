@@ -1,0 +1,247 @@
+body {
+  background-color: #98F9FF;
+  font-family: 'Open sans', sans-serif;
+  margin: 0 auto;
+  margin-bottom: 10%;
+}
+
+header {
+  display: block;
+}
+
+.new-location-form {
+  width: 80%;
+  margin: auto;
+}
+
+.location-container {
+  margin: 80px auto;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.location-box {
+  margin: 10px;
+  min-width: 320px;
+  height: 130px;
+  display: inline-block;
+  border-radius: 10px;
+  list-style: none;
+  background-color: white;
+  text-align: center;
+}
+
+.city-name a {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-family: 'Fredoka One', cursive;
+  letter-spacing: 3px;
+}
+
+p.city-name {
+  font-family: 'Fredoka One', cursive;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  letter-spacing: 3px;
+}
+
+.city {
+  text-align: center;
+}
+
+.container {
+  margin: 0 auto;
+  clear: both;
+}
+nav {
+  padding-top: 50px;
+  display: block;
+  float: right;
+  position: relative;
+  right: 0;
+}
+
+nav ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+nav li {
+  margin: 5px;
+  padding:;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: #B25413;
+}
+
+h1 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 3em;
+}
+h2 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 2em;
+}
+.nav-stuff {
+  padding: 10px 50px;
+}
+
+.block {
+  display: block;
+}
+
+input .block {
+  border-radius: 5px;
+  border: 0;
+  outline: 0;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.errors {
+  color:  #FF0000;
+}
+
+.no-style-button {
+  background: none;
+}
+
+input.form-input {
+  display: inline-block;
+  padding: 15px;
+  border: 0;
+  outline: 0;
+  background-color: #FFF;
+  padding: 15px;
+  border-radius: 5px;
+  margin-right: 20px;
+  width: 200px;
+}
+
+input.register {
+  display: block;
+  padding: 15px;
+  border: 0;
+  outline: 0;
+  background-color: #FFF;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 20px;
+  width: 200px;
+}
+.register-form, input.register {
+  margin: 20px auto;
+  display: block;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+input.form-button {
+  border: 0;
+  outline: 0;
+  background-color: #B25413;
+  padding: 15px;
+  border-radius: 5px;
+  width: 200px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Fredoka One', cursive;
+  letter-spacing: 3px;
+}
+.form-button {
+  border: 0;
+  outline: 0;
+  background-color: #B25413;
+  padding: 15px;
+  border-radius: 5px;
+  width: 200px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Fredoka One', cursive;
+  letter-spacing: 3px;
+}
+.today li {
+  display: block;
+  padding: 10px;
+  background-color: #fff;
+  margin: 30px auto;
+  border-radius: 20px;
+  list-style: none;
+  text-align: center;
+  width: 300px;
+}
+
+h4 {
+  font-family: 'Fredoka One', cursive;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.giphy-embed {
+  min-width: 250px;
+}
+
+ul {
+  padding: 0;
+  margin: 0 auto;
+}
+
+.no-style-button input {
+  background: none;
+  padding: 0;
+  border: none;
+  font: inherit;
+}
+
+
+.no-style-button input:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 375px) {
+  body {
+    width: 100%;
+  }
+
+  nav li{
+    display: block;
+  }
+
+  .location-container {
+    display: block;
+    .location-box {
+      width: 100%;
+      margin: 0 0 10px 0;
+    }
+  }
+}
+
+#add-location-form {
+  padding: 10px 50px;
+}
+
+.dashboard {
+  height: 150px;
+ }
+
+.region-name {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.gif-yo-weather a{
+  color: black;
+}

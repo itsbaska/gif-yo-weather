@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    normalize.css removes cross-browser differences in defaults, e.g.,
+    differences in how form elements appear between Firefox and IE
+    See: http://necolas.github.com/normalize.css/
+  -->
+  <link rel="stylesheet" href="/css/normalize.css">
+  <!--
+    application.css is where you put your styles
+  -->
+  <link rel="stylesheet" href="/css/application.css">
+  <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Open+Sans" rel="stylesheet">
+
+
+  <script src="https://use.fontawesome.com/0cfcb9aae2.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/js/application.js"></script>
+  <title>Gif yo Weather</title>
+</head>
+<body>
+  <header>
+    <div class="nav-stuff">
+      <% if logged_in? %>
+      <nav>
+        <ul>
+          <li>
+            <a href="/users/<%= current_user.id %>/locations">Hello, <%= current_user.first_name.capitalize %></a>
+          </li>
+          <li class="no-style-button">
+            <form method="POST" action="/sessions">
+              <input type="hidden" name="_method" value="DELETE" />
+              <input type="submit" class="button" value="Logout" />
+            </form>
+
+          </li>
+        </ul>
+      </nav>
+
+      <% else %>
+      <nav>
+        <ul>
+          <li><a href="/users/new">Register</a></li>
+          <li><a href="/sessions/new">Login</a></li>
+        </ul>
+      </nav>
+      <% end %>
+
+      <h1 class="gif-yo-weather"><a href="/">Gif yo Weather</a></h1>
+    </div>
+  </header>
+  <main class="container">
+    <%= yield %>
+  </main>
+</body>
+</html>

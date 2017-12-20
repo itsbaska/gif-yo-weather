@@ -1,0 +1,16 @@
+<h2 class="text-c">Add a new Giphy Weather Location!</h2>
+<div class="errors">
+  <% if @errors %>
+    <%= erb :"_errors", locals: { errors: @errors } %>
+  <% end %>
+</div>
+
+<% if @errors %>
+  <%= erb :"_errors", locals: { errors: @errors } %>
+<% end %>
+
+<form id="add-location-form" method="POST" action="/users/<%= current_user.id %>/locations">
+  <input class="form-input" type="text" name="location[city]" placeholder="City">
+  <input class="form-input" type="text" name="location[region]" placeholder="State/Province/Country">
+  <input class="submit-new-location form-button" type="submit" value="Add Location">
+</form>
