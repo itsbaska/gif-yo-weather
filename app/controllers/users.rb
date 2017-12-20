@@ -35,7 +35,7 @@ end
 
 post '/users/:id/locations' do
   authenticate!
-  @found_location = Location.find_by(city: params[:location][:city], region: params[:location][:region], country: params[:location][:country])
+  @found_location = Location.find_by(city: params[:location][:city], region: params[:location][:region])
   @new_location = Location.new(params[:location])
   if @found_location
     current_user.locations << @found_location
