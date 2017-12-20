@@ -6,6 +6,6 @@ class Location < ApplicationRecord
   validates :city, uniqueness: true
 
   def weather
-    Weather.lookup_by_location(self.city, self.region)
+    Weather.lookup_by_location("#{self.city}, #{self.region}", Weather::Units::FAHRENHEIT)
   end
 end
